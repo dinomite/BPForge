@@ -7,7 +7,8 @@ popup window with your boarding pass.  Save the boarding pass page as
 "Web page, complete" into the BPForge directory; using the defaults, it
 should create a "Boarding documents.html" file and a directory,
 "Boarding documents_files" with "print.html" therein.  Run united.pl,
-open the html file (`open Boarding\ documents.html`) and print it.
+open the html file (`open Boarding\ documents.html` from your terminal)
+and print it.
 
 Only tested with Chrome on Mac.  In Firefox, you might need to save the page
 from the "This frame" context menu
