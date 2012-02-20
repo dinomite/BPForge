@@ -15,5 +15,6 @@ getstore($seatingGroupURL, $boardingDocumentsDir . '/BP_1.gif');
 @ARGV = ($printHTML);
 while (<>) {
     s/(eco-bp-premier4?-text">)/$1Premier line/g;
+    s/BP_[2-4].gif/BP_1.gif/g;
     print;
 }
