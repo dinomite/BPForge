@@ -12,3 +12,6 @@ and print it.
 
 Only tested with Chrome on Mac.  In Firefox, you might need to save the page
 from the "This frame" context menu
+
+# TODO
+Make this easy to use
