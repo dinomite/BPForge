@@ -5,15 +5,16 @@ use LWP::Simple qw/getstore/;
 # Turn on in-place editing
 BEGIN{ $^I = ""; }
 
-my $boardingDocumentsDir = './Boarding documents_files';
-my $printHTML = $boardingDocumentsDir . '/print.html';
+my $rootHTMLFile = $ARGV[1];
+my $boardingDocumentsDir = "./$rootHTMLFile";
+$boardingDocumentsDir =~ s/\.html/_files/;
 
 my $seatingGroupURL = 'https://travel.united.com/web/common/images/BP_1.gif';
 
 # Get the seating group 1 image
 getstore($seatingGroupURL, $boardingDocumentsDir . '/BP_1.gif');
 
-@ARGV = ($printHTML);
+@ARGV = ($rootHTMLFile);
 while (<>) {
     # Add the "Premier line" text
     s/(eco-bp-premier4?-text">)/$1Premier line/g;
